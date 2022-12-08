@@ -3,6 +3,7 @@
 #include <utility>
 #include <set>
 #include <map>
+#include <unordered_set>
 
 using namespace std;
 
@@ -118,7 +119,7 @@ int main()
     //printContainer(m1.begin(), m1.end());
 
     //m1.insert({ "one", 7 });
-    
+    /*
     for (auto it = m1.begin(); it != m1.end(); it++)
     {
         auto key = it->first;
@@ -126,5 +127,44 @@ int main()
 
         cout << "key: " << key << ", value: " << value << "\n";
     }
+    */
+
+    set<int> set;
+    unordered_set<int> unset;
+
+    set.insert(23);
+    set.insert(11);
+    set.insert(32);
+    set.insert(15);
+    set.insert(29);
+
+    cout << "set:\n";
+    printContainer(set.begin(), set.end());
+
+    unset.insert(23);
+    unset.insert(11);
+    unset.insert(32);
+    unset.insert(15);
+    unset.insert(29);
+
+    cout << "\nunordered set:\n";
+    printContainer(unset.begin(), unset.end());
+
+    cout << hash<int>{}(23) << "\n";
+    cout << hash<int>{}(11) << "\n";
+    cout << hash<int>{}(32) << "\n";
+    cout << hash<int>{}(15) << "\n";
+    cout << hash<int>{}(29) << "\n";
+
+    cout << hash<string>{}("Hello world");
+    
+    unordered_set<User> users;
+    users.insert(User("Bob", 23));
+    users.insert(User("Tim", 45));
+    users.insert(User("Joe", 31));
+    users.insert(User("Tom", 29));
+    users.insert(User("Sam", 19));
+    
+    //auto it = users.begin();
 
 }
