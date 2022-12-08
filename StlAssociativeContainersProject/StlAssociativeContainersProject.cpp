@@ -158,12 +158,12 @@ int main()
 
     cout << hash<string>{}("Hello world");
     
-    unordered_set<User> users;
+    /*unordered_set<User> users;
     users.insert(User("Bob", 23));
     users.insert(User("Tim", 45));
     users.insert(User("Joe", 31));
     users.insert(User("Tom", 29));
-    users.insert(User("Sam", 19));
+    users.insert(User("Sam", 19));*/
     
     //auto it = users.begin();
 
